@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENS Bot</title>
+</head>
+<body>
+    <p>Name: {{ user.Name }}</p>
+    <p>Packet: {{ user.Packet }}</p>
+    <p>Latency: {{ user.Latency }}</p>
+
+    <div class="w3-container" style="position:relative">
+        <form action="yoursearch.php" method="post" enctype="multipart/form-data">
+            <input type="text" class='w3-input w3-border' name='sendmsg' id='sendmsg'  required placeholder="type search here">
+            <button  class="w3-btn w3-blue w3-border  w3-round-xlarge " style="position:absolute;top:2px;right:16px;" >Go</button>
+        </form>
+    </div>
+
+<! -- disable ctrl+U-->
+    <script>
+        // Disable Ctrl+U
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && e.key === 'u') {
+                e.preventDefault();
+                alert("disabled.");
+            }
+        });
+    </script>
+<! -- disable ctrl+U-->
+</body>
+</html>
